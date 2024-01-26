@@ -88,3 +88,13 @@
     gap: 30px;
     display: flex;
 }
+
+.menu{
+    padding: 5px;
+    margin:10px;
+}
+
+.user-card {
+    padding: 5px;
+    border:1px solid black;
+}

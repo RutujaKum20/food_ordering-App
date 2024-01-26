@@ -28,3 +28,8 @@
 - named export import
   export const component
   import {comenent} from "path"
+
+# 2 types of web routing
+
+- client side routing
+- server side routing

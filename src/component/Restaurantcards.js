@@ -4,7 +4,7 @@ const Restaurantcards = (props) => {
   const { resData } = props;
 
   // destructuring the data
-  const { cloudinaryImageId, name, cuisines, avgRating, sla } = resData.info;
+  const { cloudinaryImageId, name, cuisines, avgRating, sla } = resData;
 
   console.log(resData);
 

@@ -1,6 +1,7 @@
 import Restaurantcards from "./Restaurantcards";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   // local state variable = super powerful variable
@@ -21,18 +22,14 @@ const Body = () => {
     const json = await data.json();
     console.log(json);
 
-    // const restoList =
-    //   json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants;
-    // console.log(restoList);
-    // setlistOfRestaurant(restoList);
+    let restoList =
+      json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants;
+    restoList = restoList.map((restaurant) => restaurant.info);
+    console.log(restoList);
 
     //optional chaining
-    setlistOfRestaurant(
-      json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
-    );
-    setfilteredRestaurant(
-      json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
-    );
+    setlistOfRestaurant(restoList);
+    setfilteredRestaurant(restoList);
   };
 
   {
@@ -90,7 +87,11 @@ const Body = () => {
       </div>
       <div className="rest-container">
         {filteredRestaurant.map((restaurant, index) => {
-          return <Restaurantcards key={index} resData={restaurant} />;
+          return (
+            <Link key={restaurant.id} to={"/restaurants/" + restaurant.id}>
+              <Restaurantcards resData={restaurant} />
+            </Link>
+          );
         })}
         {/* <Restaurantcards resData={reslist[0]} />
         <Restaurantcards resData={reslist[1]} /> */}
