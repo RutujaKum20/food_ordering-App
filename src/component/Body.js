@@ -12,6 +12,7 @@ const Body = () => {
 
   const [searchText, setsearchText] = useState("");
 
+  console.log("Body resto", listOfRestaurant);
   const RestaurantcardPromoted = withPromotedLabel(Restaurantcards);
 
   useEffect(() => {

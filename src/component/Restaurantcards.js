@@ -22,7 +22,7 @@ const Restaurantcards = (props) => {
   );
 };
 
-// Higher orde component
+// Higher order component
 // input - restaurantcard => restaurantcardPromoted
 
 export const withPromotedLabel = (Restaurantcards) => {
