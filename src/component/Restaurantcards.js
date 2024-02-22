@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { SWIGGY_URL } from "../utils/constants";
+import UserContext from "../utils/UserContext";
 
 const Restaurantcards = (props) => {
   const { resData } = props;
+  const { loggedInUser } = useContext(UserContext);
 
   // destructuring the data
   const { cloudinaryImageId, name, cuisines, avgRating, sla } = resData;
@@ -18,6 +21,7 @@ const Restaurantcards = (props) => {
       <h3>{cuisines.join(", ")}</h3>
       <h4>{avgRating}</h4>
       <h4>{sla?.slaString} </h4>
+      <h4>User : {loggedInUser}</h4>
     </div>
   );
 };
