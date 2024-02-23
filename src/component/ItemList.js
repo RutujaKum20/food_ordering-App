@@ -1,7 +1,17 @@
+import { useDispatch } from "react-redux";
 import { SWIGGY_URL } from "../utils/constants";
+import { addItem } from "../utils/cartSlice";
 
 const ItemList = ({ items }) => {
   console.log("items", items);
+
+  const dispatch = useDispatch();
+
+  const handleAddItem = (item) => {
+    //  dispatch an action
+    dispatch(addItem(item));
+  };
+
   return (
     <div>
       {items.map((item) => (
@@ -18,7 +28,10 @@ const ItemList = ({ items }) => {
           </div>
           <div className="w-3/12 p-4">
             <div className="absolute">
-              <button className="px-3 py-1 rounded-lg m-16 bg-black text-white shadow-lg ">
+              <button
+                className="px-3 py-1 rounded-lg m-16 bg-black text-white shadow-lg "
+                onClick={() => handleAddItem(item)}
+              >
                 Add +
               </button>
             </div>
