@@ -1,0 +1,88 @@
+{
+  "id": "131089",
+  "name": "Shree Dwarka Sweets",
+  "cloudinaryImageId": "ugnmp5jjntkjjfeqifny",
+  "locality": "Sector 3",
+  "areaName": "Panvel",
+  "costForTwo": "₹400 for two",
+  "cuisines": ["Sweets"],
+  "avgRating": 4.3,
+  "veg": true,
+  "parentId": "184483",
+  "avgRatingString": "4.3",
+  "totalRatingsString": "5K+",
+  "sla": {
+    "deliveryTime": 26,
+    "lastMileTravel": 4,
+    "serviceability": "SERVICEABLE",
+    "slaString": "25-30 mins",
+    "lastMileTravelString": "4.0 km",
+    "iconType": "ICON_TYPE_EMPTY"
+  },
+  "availability": {
+    "nextCloseTime": "2024-02-27 21:15:00",
+    "opened": true
+  },
+  "badges": {
+    "imageBadges": [
+      {
+        "imageId": "v1695133679/badges/Pure_Veg111.png",
+        "description": "pureveg"
+      }
+    ],
+    "textExtendedBadges": [
+      {
+        "iconId": "guiltfree/GF_Logo_android_3x",
+        "shortDescription": "options available",
+        "fontColor": "#7E808C"
+      }
+    ]
+  },
+  "isOpen": true,
+  "type": "F",
+  "badgesV2": {
+    "entityBadges": {
+      "imageBased": {
+        "badgeObject": [
+          {
+            "attributes": {
+              "description": "pureveg",
+              "imageId": "v1695133679/badges/Pure_Veg111.png"
+            }
+          }
+        ]
+      },
+      "textBased": {},
+      "textExtendedBadges": {
+        "badgeObject": [
+          {
+            "attributes": {
+              "description": "",
+              "fontColor": "#7E808C",
+              "iconId": "guiltfree/GF_Logo_android_3x",
+              "shortDescription": "options available"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "aggregatedDiscountInfoV3": {},
+  "orderabilityCommunication": {
+    "title": {},
+    "subTitle": {},
+    "message": {},
+    "customIcon": {}
+  },
+  "differentiatedUi": {
+    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+    "differentiatedUiMediaDetails": {
+      "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+      "lottie": {},
+      "video": {}
+    }
+  },
+  "reviewsSummary": {},
+  "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+  "restaurantOfferPresentationInfo": {}
+}

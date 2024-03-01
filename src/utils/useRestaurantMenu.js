@@ -13,25 +13,26 @@ const useRestaurantMenu = (resId) => {
 
   const fetchMenu = async () => {
     const data = await fetch(
-      `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.07480&lng=72.88560&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`
+      `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.0166223&lng=73.0966019&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`
     );
+    // `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.07480&lng=72.88560&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`
 
     const json = await data.json();
-    console.log(json.data.cards[2].card.card.info);
-    setresInfo(json.data.cards[2].card.card.info);
+    console.log(json.data.cards[0].card.card.info);
+    setresInfo(json.data.cards[0].card.card.info);
     console.log("resInfo", resInfo);
 
     let recommendations =
-      json.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card
+      json.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[2].card.card
         .itemCards;
     console.log("recommendations", recommendations);
     setrecmInfo(recommendations);
 
-    let category = json.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards;
+    let category = json.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards;
     console.log("category", category);
 
     const categories =
-      json.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards.filter(
+      json.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards.filter(
         (c) =>
           c.card?.card?.["@type"] ==
           "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"

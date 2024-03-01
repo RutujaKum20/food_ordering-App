@@ -3,7 +3,6 @@ import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import { withPromotedLabel } from "./Restaurantcards";
 import UserContext from "../utils/UserContext";
 
 const Body = () => {
@@ -22,7 +21,8 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0166223&lng=73.0966019&page_type=DESKTOP_WEB_LISTING"
+      // "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0166223&lng=73.0966019&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0166223&lng=73.0966019&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
 
     const json = await data.json();
@@ -68,6 +68,7 @@ const Body = () => {
         <div className="search m-4 p-4 ">
           <input
             type="text"
+            data-testid="searchInput"
             className="border border-solid border-black"
             placeholder="search"
             value={searchText}
@@ -82,7 +83,7 @@ const Body = () => {
               //searchText
               console.log(searchText);
               const filteredRestaurant = listOfRestaurant.filter((res) =>
-                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+                res.name.toLowerCase().includes(searchText.toLowerCase())
               );
 
               setfilteredRestaurant(filteredRestaurant);

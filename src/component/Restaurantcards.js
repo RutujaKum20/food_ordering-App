@@ -4,15 +4,21 @@ import UserContext from "../utils/UserContext";
 
 const Restaurantcards = (props) => {
   const { resData } = props;
+
+  console.log("resData", resData);
+
   const { loggedInUser } = useContext(UserContext);
 
   // destructuring the data
   const { cloudinaryImageId, name, cuisines, avgRating, sla } = resData;
 
-  console.log(resData);
+  // console.log("resdata", resData);
 
   return (
-    <div className="res-cards m-4 p-4 w-[250px] hover:border border-solid border-black  bg-gray-100 hover:bg-gray-200">
+    <div
+      data-testid="resCard"
+      className="res-cards m-4 p-4 w-[250px] hover:border border-solid border-black  bg-gray-100 hover:bg-gray-200"
+    >
       <img
         className="res-img rounded-lg"
         src={SWIGGY_URL + cloudinaryImageId}
