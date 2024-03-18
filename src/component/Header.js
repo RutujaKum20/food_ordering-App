@@ -20,9 +20,9 @@ const Header = () => {
   console.log(cartItems);
 
   return (
-    <div className="flex justify-between shadow-lg bg-pink-100 sm:bg-yellow-100 lg:bg-green-100">
+    <div className="flex justify-between shadow-lg bg-pink-100 sm:bg-yellow-100 lg:bg-orange-300 h-[160px]">
       <div className="logo-container">
-        <img className="w-[200px] " src={LOGO_URL} />
+        <img className="w-[200px] h-[160px] " src={LOGO_URL} />
       </div>
       <div className="flex items-center">
         <ul className="flex p-3 m-3 gap-5 ">

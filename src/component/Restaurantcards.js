@@ -17,10 +17,10 @@ const Restaurantcards = (props) => {
   return (
     <div
       data-testid="resCard"
-      className="res-cards m-4 p-4 w-[250px] hover:border border-solid border-black  bg-gray-100 hover:bg-gray-200"
+      className="res-cards m-4 p-6 w-[300px] h-[500px] hover:border border-solid border-black  bg-gray-100 hover:bg-gray-200 rounded-lg"
     >
       <img
-        className="res-img rounded-lg"
+        className="res-img rounded-lg "
         src={SWIGGY_URL + cloudinaryImageId}
       />
       <h3 className="font-bold py-4 text-lg">{name}</h3>

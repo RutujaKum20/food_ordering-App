@@ -69,7 +69,7 @@ const Body = () => {
           <input
             type="text"
             data-testid="searchInput"
-            className="border border-solid border-black"
+            className="border border-solid border-black rounded-lg m-1 p-1"
             placeholder="search"
             value={searchText}
             onChange={(e) => {
@@ -106,16 +106,16 @@ const Body = () => {
             Top rated restaurants
           </button>
         </div>
-        <div className="topratedrestaurants m-4 p-4 flex items-center rounded-lg">
+        <div className="topratedrestaurants m-4 p-4 flex items-center ">
           <label>Username : </label>
           <input
-            className="border border-black p-2 m-1"
+            className="border border-black p-1 m-1 rounded-lg bg-gray-100"
             value={loggedInUser}
             onChange={(e) => setuserName(e.target.value)}
           />
         </div>
       </div>
-      <div className="rest-container flex flex-wrap">
+      <div className="rest-container flex flex-wrap gap-5 p-8">
         {filteredRestaurant.map((restaurant, index) => {
           return (
             <Link key={restaurant.id} to={"/restaurants/" + restaurant.id}>
